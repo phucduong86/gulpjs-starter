@@ -6,9 +6,14 @@ gulp.task('browser-sync', function() {
         files: ["./*.htm"],
         server: {
             baseDir: "./",
-            
+            index: "access_survey_en.htm"
         },
-	browser: ["Chrome", "Explorer"]
+	browser: ["Chrome", "Explorer"],
+	ghostMode: {
+	    clicks: true,
+	    forms: true,
+	    scroll: true
+	}
     });
 });
 
